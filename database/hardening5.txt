@@ -1,0 +1,122 @@
+ALTER TABLE `users` ADD `bank_acc_no` VARCHAR(25) NOT NULL AFTER `stripe_bank_account_id`;
+
+
+
+
+
+ALTER TABLE `services` ADD `display_order` TINYINT UNSIGNED NULL DEFAULT NULL AFTER `commission_percent`;
+
+
+
+ALTER TABLE `services` CHANGE `tip` `tip` VARCHAR(2000) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL;
+
+
+ALTER TABLE services AUTO_INCREMENT = 851;
+
+INSERT INTO `services` (`id`, `name`, `image`, `description`, `tip`, `parent_id`, `commission_percent`, `display_order`, `created_at`, `updated_at`) VALUES (NULL, 'Hair + makeup', 'harMakeup@2x.png', '', '', NULL, '10.00', NULL, '2018-04-11 10:36:30', '2018-09-13 09:40:19');
+
+
+
+INSERT INTO `services` (`id`, `name`, `image`, `description`, `tip`, `parent_id`, `commission_percent`, `display_order`, `created_at`, `updated_at`) VALUES (NULL, 'Makeup+blow dry', '', 'Includes a full makeup application (including party lashes of your choice) tailored to your preferences, inspiration and occasion. Finished off with a signature blow dry sleek or bouncy.', 'Pre-Service Tips:
+Please arrive at your appointment with a clean face – all traces of makeup removed unless you select makeup removal as an add on service.                                                                                                                                                  
+Dry Style - Skip the wash and arrive with your hair clean and 100% dry
+For all upstyles – To prepare your hair, wash the morning or night before your appointment, avoiding conditioner near the roots/scalp and without using styling products.  Allow hair to airdry or blowdry, and avoid thermal straightening with irons our tools – leave the rest up to the beauty pro!                                                                                  
+', '851', '10.00', NULL, '2018-04-24 09:19:38', '2018-09-13 09:40:19');
+
+
+INSERT INTO `services` (`id`, `name`, `image`, `description`, `tip`, `parent_id`, `commission_percent`, `display_order`, `created_at`, `updated_at`) VALUES (NULL, 'Makeup+blow dry-short hair', '', 'Includes a full makeup application (including party lashes of your choice) tailored to your preferences, inspiration and occasion. Finished off with a signature blow dry sleek or bouncy for short hair.', 'Pre-Service Tips:
+Please arrive at your appointment with a clean face – all traces of makeup removed unless you select makeup removal as an add on service.                                                                                                                                                  
+Dry Style - Skip the wash and arrive with your hair clean and 100% dry
+For all upstyles – To prepare your hair, wash the morning or night before your appointment, avoiding conditioner near the roots/scalp and without using styling products.  Allow hair to airdry or blowdry, and avoid thermal straightening with irons our tools – leave the rest up to the beauty pro!                                                                                  
+', '851', '10.00', NULL, '2018-04-24 09:19:38', '2018-09-13 09:40:19');
+
+
+
+INSERT INTO `services` (`id`, `name`, `image`, `description`, `tip`, `parent_id`, `commission_percent`, `display_order`, `created_at`, `updated_at`) VALUES (NULL, 'Makeup+blow dry-medium hair', '', 'Includes a full makeup application (including party lashes of your choice) tailored to your preferences, inspiration and occasion. Finished off with a signature blow dry sleek or bouncy for medium hair.', 'Pre-Service Tips:
+Please arrive at your appointment with a clean face – all traces of makeup removed unless you select makeup removal as an add on service.                                                                                                                                                  
+Dry Style - Skip the wash and arrive with your hair clean and 100% dry
+For all upstyles – To prepare your hair, wash the morning or night before your appointment, avoiding conditioner near the roots/scalp and without using styling products.  Allow hair to airdry or blowdry, and avoid thermal straightening with irons our tools – leave the rest up to the beauty pro!                                                                                  
+', '851', '10.00', NULL, '2018-04-24 09:19:38', '2018-09-13 09:40:19');
+
+
+INSERT INTO `services` (`id`, `name`, `image`, `description`, `tip`, `parent_id`, `commission_percent`, `display_order`, `created_at`, `updated_at`) VALUES (NULL, 'Makeup+blow dry-long hair', '', 'Includes a full makeup application (including party lashes of your choice) tailored to your preferences, inspiration and occasion. Finished off with a signature blow dry sleek or bouncy for long hair.', 'Pre-Service Tips:
+Please arrive at your appointment with a clean face – all traces of makeup removed unless you select makeup removal as an add on service.                                                                                                                                                  
+Dry Style - Skip the wash and arrive with your hair clean and 100% dry
+For all upstyles – To prepare your hair, wash the morning or night before your appointment, avoiding conditioner near the roots/scalp and without using styling products.  Allow hair to airdry or blowdry, and avoid thermal straightening with irons our tools – leave the rest up to the beauty pro!                                                                                  
+', '851', '10.00', NULL, '2018-04-24 09:19:38', '2018-09-13 09:40:19');
+
+
+
+INSERT INTO `services` (`id`, `name`, `image`, `description`, `tip`, `parent_id`, `commission_percent`, `display_order`, `created_at`, `updated_at`) VALUES (NULL, 'Makeup+heatystyling', '', 'Includes a full makeup application (including party lashes of your choice) tailored to your preferences, inspiration and occasion. Get a blow dry finished with heat styling to achieve curls, waves or straightening.', 'Pre-Service Tips:
+Please arrive at your appointment with a clean face – all traces of makeup removed unless you select makeup removal as an add on service.                                                                                                                                                  
+Dry Style - Skip the wash and arrive with your hair clean and 100% dry
+For all upstyles – To prepare your hair, wash the morning or night before your appointment, avoiding conditioner near the roots/scalp and without using styling products.  Allow hair to airdry or blowdry, and avoid thermal straightening with irons our tools – leave the rest up to the beauty pro!                                                                                  
+', '851', '10.00', NULL, '2018-04-24 09:19:38', '2018-09-13 09:40:19');
+
+
+
+INSERT INTO `services` (`id`, `name`, `image`, `description`, `tip`, `parent_id`, `commission_percent`, `display_order`, `created_at`, `updated_at`) VALUES (NULL, 'Makeup+heat styling-short hair', '', 'Includes a full makeup application (including party lashes of your choice) tailored to your preferences, inspiration and occasion. Get a blow dry finished with heat styling to achieve curls, waves or straightening for your short hair.', 'Pre-Service Tips:
+Please arrive at your appointment with a clean face – all traces of makeup removed unless you select makeup removal as an add on service.                                                                                                                                                  
+Dry Style - Skip the wash and arrive with your hair clean and 100% dry
+For all upstyles – To prepare your hair, wash the morning or night before your appointment, avoiding conditioner near the roots/scalp and without using styling products.  Allow hair to airdry or blowdry, and avoid thermal straightening with irons our tools – leave the rest up to the beauty pro!                                                                                  
+', '851', '10.00', NULL, '2018-04-24 09:19:38', '2018-09-13 09:40:19');
+
+
+INSERT INTO `services` (`id`, `name`, `image`, `description`, `tip`, `parent_id`, `commission_percent`, `display_order`, `created_at`, `updated_at`) VALUES (NULL, 'Makeup+heat styling-medium hair', '', 'Includes a full makeup application (including party lashes of your choice) tailored to your preferences, inspiration and occasion. Get a blow dry finished with heat styling to achieve curls, waves or straightening for your medium length hair.', 'Pre-Service Tips:
+Please arrive at your appointment with a clean face – all traces of makeup removed unless you select makeup removal as an add on service.                                                                                                                                                  
+Dry Style - Skip the wash and arrive with your hair clean and 100% dry
+For all upstyles – To prepare your hair, wash the morning or night before your appointment, avoiding conditioner near the roots/scalp and without using styling products.  Allow hair to airdry or blowdry, and avoid thermal straightening with irons our tools – leave the rest up to the beauty pro!                                                                                  
+', '851', '10.00', NULL, '2018-04-24 09:19:38', '2018-09-13 09:40:19');
+
+
+INSERT INTO `services` (`id`, `name`, `image`, `description`, `tip`, `parent_id`, `commission_percent`, `display_order`, `created_at`, `updated_at`) VALUES (NULL, 'Makeup+heat styling-long hair', '', 'Includes a full makeup application (including party lashes of your choice) tailored to your preferences, inspiration and occasion. Get a blow dry finished with heat styling to achieve curls, waves or straightening for your long hair.', 'Pre-Service Tips:
+Please arrive at your appointment with a clean face – all traces of makeup removed unless you select makeup removal as an add on service.                                                                                                                                                  
+Dry Style - Skip the wash and arrive with your hair clean and 100% dry
+For all upstyles – To prepare your hair, wash the morning or night before your appointment, avoiding conditioner near the roots/scalp and without using styling products.  Allow hair to airdry or blowdry, and avoid thermal straightening with irons our tools – leave the rest up to the beauty pro!                                                                                  
+', '851', '10.00', NULL, '2018-04-24 09:19:38', '2018-09-13 09:40:19');
+
+
+
+INSERT INTO `services` (`id`, `name`, `image`, `description`, `tip`, `parent_id`, `commission_percent`, `display_order`, `created_at`, `updated_at`) VALUES (NULL, 'Makeup+upstyle', '', 'Includes a full makeup application (with your choice of party lashes) and an upstyle hair service, especially popular for formal occasions.', 'Pre-Service Tips:
+Please arrive at your appointment with a clean face – all traces of makeup removed unless you select makeup removal as an add on service.                                                                                                                                                  
+Dry Style - Skip the wash and arrive with your hair clean and 100% dry
+For all upstyles – To prepare your hair, wash the morning or night before your appointment, avoiding conditioner near the roots/scalp and without using styling products.  Allow hair to airdry or blowdry, and avoid thermal straightening with irons our tools – leave the rest up to the beauty pro!                                                                                  
+', '851', '10.00', NULL, '2018-04-24 09:19:38', '2018-09-13 09:40:19');
+
+
+INSERT INTO `services` (`id`, `name`, `image`, `description`, `tip`, `parent_id`, `commission_percent`, `display_order`, `created_at`, `updated_at`) VALUES (NULL, 'Makeup+upstyle-short hair', '', 'Includes a full makeup application (with your choice of party lashes) and an upstyle hair service, especially popular for formal occasions.  Service for short hair.', 'Pre-Service Tips:
+Please arrive at your appointment with a clean face – all traces of makeup removed unless you select makeup removal as an add on service.                                                                                                                                                  
+Dry Style - Skip the wash and arrive with your hair clean and 100% dry
+For all upstyles – To prepare your hair, wash the morning or night before your appointment, avoiding conditioner near the roots/scalp and without using styling products.  Allow hair to airdry or blowdry, and avoid thermal straightening with irons our tools – leave the rest up to the beauty pro!                                                                                  
+', '851', '10.00', NULL, '2018-04-24 09:19:38', '2018-09-13 09:40:19');
+
+
+INSERT INTO `services` (`id`, `name`, `image`, `description`, `tip`, `parent_id`, `commission_percent`, `display_order`, `created_at`, `updated_at`) VALUES (NULL, 'Makeup+upstyle-medium hair', '', 'Includes a full makeup application (with party lashes of your choice) and upstyle hair service, especially popular for formal occasions.  Service for medoum length hair.', 'Pre-Service Tips:
+Please arrive at your appointment with a clean face – all traces of makeup removed unless you select makeup removal as an add on service.                                                                                                                                                  
+Dry Style - Skip the wash and arrive with your hair clean and 100% dry
+For all upstyles – To prepare your hair, wash the morning or night before your appointment, avoiding conditioner near the roots/scalp and without using styling products.  Allow hair to airdry or blowdry, and avoid thermal straightening with irons our tools – leave the rest up to the beauty pro!                                                                                  
+', '851', '10.00', NULL, '2018-04-24 09:19:38', '2018-09-13 09:40:19');
+
+
+
+INSERT INTO `services` (`id`, `name`, `image`, `description`, `tip`, `parent_id`, `commission_percent`, `display_order`, `created_at`, `updated_at`) VALUES (NULL, 'Makeup+upstyle-long hair', '', 'Includes a full makeup application (with lashes) and upstyle hair service, especially popular for formal occasions.  Service for long hair.', 'Pre-Service Tips:
+Please arrive at your appointment with a clean face – all traces of makeup removed unless you select makeup removal as an add on service.                                                                                                                                                  
+Dry Style - Skip the wash and arrive with your hair clean and 100% dry
+For all upstyles – To prepare your hair, wash the morning or night before your appointment, avoiding conditioner near the roots/scalp and without using styling products.  Allow hair to airdry or blowdry, and avoid thermal straightening with irons our tools – leave the rest up to the beauty pro!                                                                                  
+', '851', '10.00', NULL, '2018-04-24 09:19:38', '2018-09-13 09:40:19');
+
+
+
+
+
+
+
+
+
+UPDATE `services` SET `display_order` = '1' WHERE `services`.`id` = 1; UPDATE `services` SET `display_order` = '2' WHERE `services`.`id` = 2; UPDATE `services` SET `display_order` = '5' WHERE `services`.`id` = 3; UPDATE `services` SET `display_order` = '4' WHERE `services`.`id` = 4; UPDATE `services` SET `display_order` = '7' WHERE `services`.`id` = 5; UPDATE `services` SET `display_order` = '6' WHERE `services`.`id` = 6; UPDATE `services` SET `name` = 'Hair removal', `display_order` = '9' WHERE `services`.`id` = 7; UPDATE `services` SET `display_order` = '8' WHERE `services`.`id` = 8; UPDATE `services` SET `display_order` = '10' WHERE `services`.`id` = 9; UPDATE `services` SET `display_order` = '11' WHERE `services`.`id` = 10; UPDATE `services` SET `display_order` = '3' WHERE `services`.`id` = 851;
+
+
+
+
+
+ALTER TABLE `customer_bookings` ADD `utc_offset` VARCHAR(20) NOT NULL AFTER `timezone`;

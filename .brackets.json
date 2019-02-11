@@ -1,0 +1,8 @@
+{
+    "jscodehints.detectedExclusions": [
+        "/Applications/XAMPP/xamppfiles/htdocs/beautyjunkie-php/vendor/yajra/laravel-datatables-oracle/src/resources/assets/buttons.server-side.js",
+        "/Applications/XAMPP/xamppfiles/htdocs/beautyjunkie-php/gulpfile.js",
+        "/Applications/XAMPP/xamppfiles/htdocs/beautyjunkie-php/vendor/phpunit/php-code-coverage/src/Report/Html/Renderer/Template/js/respond.min.js",
+        "/Applications/XAMPP/xamppfiles/htdocs/beautyjunkie-php/vendor/phpunit/php-code-coverage/src/Report/Html/Renderer/Template/js/nv.d3.min.js"
+    ]
+}

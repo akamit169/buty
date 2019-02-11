@@ -1,0 +1,42 @@
+<?php
+
+/*
+ * Copyright 2016-2018 Appster Information Pvt. Ltd. 
+ * All rights reserved.
+ * File: SetPaymentDetailsRequest.php
+ * CodeLibrary/Project: Beauty Junkie
+ * Author: Amit
+ * CreatedOn: date (16/05/2018) 
+ */
+
+namespace App\Http\Requests\Service;
+use App\Http\Requests\BaseApiRequest;
+
+use App\Models\User;
+
+
+class SetPaymentDetailsRequest extends BaseApiRequest {
+
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array
+     */
+    public function rules() {
+        return [
+           'cardToken' => 'required',
+           'bankAccountId' => 'required',
+           'stripeVerificationDoc' => 'required|image|max:'.(1024*5) //5MB
+        ];
+    }
+    
+    /**
+     * Determine if the user is authorized to make this request.
+     *
+     * @return bool
+     */
+    public function authorize() {
+        return true;
+    }
+
+}

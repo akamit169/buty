@@ -1,0 +1,1 @@
+ALTER TABLE `customer_bookings` ADD `cancelled_by` INT UNSIGNED NOT NULL AFTER `stripe_charge_id`, ADD `cancellation_stripe_charge_id` VARCHAR(100) NOT NULL AFTER `cancelled_by`, ADD INDEX (`cancelled_by`);

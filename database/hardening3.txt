@@ -1,0 +1,5 @@
+ALTER TABLE `beautician_details` ADD `mobile_services` TINYINT UNSIGNED NOT NULL AFTER `cruelty_free_makeup`;
+
+ALTER TABLE `customer_bookings` ADD `is_referral_cashback_applicable` TINYINT UNSIGNED NOT NULL DEFAULT '0' AFTER `commission_percent`;
+
+ALTER TABLE `users` ADD `available_cashback_claims` SMALLINT UNSIGNED NOT NULL AFTER `referral_code_used`;

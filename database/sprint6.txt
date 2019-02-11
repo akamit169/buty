@@ -1,0 +1,12 @@
+ALTER TABLE `flagged_users` CHANGE `reason` `flag_reason_id` INT UNSIGNED NOT NULL;
+ALTER TABLE `flagged_users` ADD INDEX(`flag_reason_id`);
+ALTER TABLE `flagged_users` ADD FOREIGN KEY (`flag_reason_id`) REFERENCES `beauty`.`flag_reasons`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+
+ALTER TABLE `customer_bookings` ADD `natural_image` VARCHAR(100) NOT NULL AFTER `has_multiple_sessions`;
+ALTER TABLE `customer_bookings` ADD `on_site_service` TINYINT UNSIGNED NOT NULL DEFAULT '1' AFTER `has_multiple_sessions`;
+ALTER TABLE `customer_bookings` ADD `parent_service_id` SMALLINT UNSIGNED NOT NULL AFTER `service_id`;
+ALTER TABLE `customer_bookings` ADD `booking_address` VARCHAR(250) NOT NULL AFTER `booking_note`;
+
+
+ALTER TABLE `users` ADD `stripe_bank_account_id` VARCHAR(100) NOT NULL AFTER `stripe_customer_id`;

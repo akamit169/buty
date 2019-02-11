@@ -1,0 +1,15 @@
+INSERT INTO `admin_settings` (`id`, `config_key`, `config_value`, `created_at`, `updated_at`) VALUES (NULL, 'travel_time_km', '3', '2018-05-19 14:32:18', '2018-07-28 11:11:25');
+
+ALTER TABLE `users` ADD `commission_percent` DECIMAL(5,2) UNSIGNED NOT NULL AFTER `stripe_bank_account_id`;
+
+ALTER TABLE `services` ADD `commission_percent` DECIMAL(5,2) UNSIGNED NOT NULL AFTER `parent_id`;
+
+ALTER TABLE `services` ADD `updated_at` DATETIME on update CURRENT_TIMESTAMP NOT NULL AFTER `created_at`;
+
+ALTER TABLE `customer_bookings` ADD `commission_percent` DECIMAL(5,2) UNSIGNED NOT NULL AFTER `beautician_delay_duration`;
+
+ALTER TABLE `beautician_services` ADD `premium_commission_percent` DECIMAL(5,2) UNSIGNED NOT NULL AFTER `locked_by`;
+
+update `customer_bookings` set commission_percent=10;
+
+ALTER TABLE `beautician_details` CHANGE `work_radius` `work_radius` SMALLINT(4) UNSIGNED NOT NULL;

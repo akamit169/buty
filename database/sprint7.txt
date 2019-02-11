@@ -1,0 +1,218 @@
+
+CREATE TABLE `customer_bookings_master` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `customer_id` int(11) UNSIGNED NOT NULL,
+  `beautician_id` int(11) UNSIGNED NOT NULL,
+  `cost` decimal(8,2) NOT NULL,
+  `booking_address` varchar(500) NOT NULL,
+  `status` tinyint(1) NOT NULL COMMENT '0 - pending, 1 -done, 2 - cancelled',
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `customer_bookings_master`
+--
+
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `customer_bookings_master`
+--
+ALTER TABLE `customer_bookings_master`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `customer_id` (`customer_id`),
+  ADD KEY `beautician_id` (`beautician_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `customer_bookings_master`
+--
+ALTER TABLE `customer_bookings_master`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `customer_bookings_master`
+--
+ALTER TABLE `customer_bookings_master`
+  ADD CONSTRAINT `customer_bookings_master_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `customer_bookings_master_ibfk_2` FOREIGN KEY (`beautician_id`) REFERENCES `users` (`id`);
+
+
+ALTER TABLE `customer_bookings` ADD `customer_bookings_master_id` INT UNSIGNED NULL AFTER `id`;
+ALTER TABLE `customer_bookings` ADD INDEX(`customer_bookings_master_id`);
+ALTER TABLE `customer_bookings` ADD FOREIGN KEY (`customer_bookings_master_id`) REFERENCES `beauty`.`customer_bookings_master`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+ALTER TABLE `customer_bookings` DROP `status`;
+
+
+--
+-- Table structure for table `rating_reasons`
+--
+
+CREATE TABLE IF NOT EXISTS `rating_reasons` (
+  `id` int(10) unsigned NOT NULL,
+  `type` tinyint(1) NOT NULL COMMENT '1=>''Beautician Pro'', 2=>''Customer''',
+  `reason` varchar(550) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `rating_reasons`
+--
+
+INSERT INTO `rating_reasons` (`id`, `type`, `reason`, `created_at`, `updated_at`, `deleted_at`) VALUES
+(1, 2, 'Customer did not behave in the manner I expect my clients to behave (courteous & respectful)', '2018-05-19 06:44:45', '2018-05-19 06:46:30', NULL),
+(2, 2, 'Customer did not clearly communicate their requirements for the service', '2018-05-19 06:46:05', '2018-05-19 06:46:32', NULL),
+(3, 2, 'Customer arrived late to the appointment', '2018-05-19 06:46:05', '2018-05-19 06:46:34', NULL),
+(4, 2, 'Customer was not at the designated booking address', '2018-05-19 06:46:05', '2018-05-19 06:46:36', NULL),
+(5, 2, 'Customer did not show up to their booking (+ no attempt to call)', '2018-05-19 06:46:05', '2018-05-19 06:46:46', NULL),
+(6, 2, ' Customer did not provide adequate space for the service to be sufficiently carried out (mobile service)', '2018-05-19 06:46:05', '2018-05-19 06:46:51', NULL),
+(7, 1, 'The beauty pro did not deliver the expected level of customer service', '2018-05-19 06:48:57', '2018-05-19 06:48:57', NULL),
+(8, 1, 'The service was not what I had asked for and/or expected.', '2018-05-19 06:48:57', '2018-05-19 06:48:57', NULL),
+(9, 1, 'The beauty pro used false/misleading information on their profile', '2018-05-19 06:48:57', '2018-05-19 06:48:57', NULL),
+(10, 1, 'The service took significantly longer than scheduled for', '2018-05-19 06:48:57', '2018-05-19 06:48:57', NULL),
+(11, 1, 'The service was rushed and took significantly less time than scheduled for', '2018-05-19 06:48:57', '2018-05-19 06:48:57', NULL),
+(12, 1, 'The beauty pro was rude/ubrupt and unprofessional', '2018-05-19 06:48:57', '2018-05-19 06:48:57', NULL),
+(13, 1, 'I did not get the service I paid for', '2018-05-19 06:48:57', '2018-05-19 06:48:57', NULL),
+(14, 1, 'The beauty pro was late for my appointment', '2018-05-19 06:48:57', '2018-05-19 06:48:57', NULL);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `rating_reasons`
+--
+ALTER TABLE `rating_reasons`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `rating_reasons`
+--
+ALTER TABLE `rating_reasons`
+  MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
+
+ALTER TABLE `booking_ratings` ADD `below_rating_reason` INT(10) UNSIGNED NULL AFTER `comment`; 
+ALTER TABLE `booking_ratings` ADD INDEX( `below_rating_reason`);
+ALTER TABLE `booking_ratings` ADD FOREIGN KEY (`below_rating_reason`) REFERENCES `rating_reasons`(`id`) ON DELETE SET NULL ON UPDATE SET NULL;
+ALTER TABLE `booking_ratings` DROP FOREIGN KEY `booking_ratings_ibfk_1`; ALTER TABLE `booking_ratings` ADD CONSTRAINT `booking_ratings_ibfk_1` FOREIGN KEY (`customer_booking_id`) REFERENCES `beauty`.`customer_bookings_master`(`id`) ON DELETE CASCADE ON UPDATE RESTRICT; 
+
+ALTER TABLE `beautician_services` CHANGE `discount_startdate` `discount_startdate` DATETIME NULL DEFAULT NULL, CHANGE `discount_enddate` `discount_enddate` DATETIME NULL DEFAULT NULL;
+ALTER TABLE `beautician_services` ADD `discounted_days` INT(5) NOT NULL AFTER `discount_enddate`; 
+
+CREATE TABLE `admin_settings` (
+  `id` smallint(5) UNSIGNED NOT NULL,
+  `config_key` varchar(100) NOT NULL,
+  `config_value` varchar(200) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin_settings`
+--
+
+INSERT INTO `admin_settings` (`id`, `config_key`, `config_value`, `created_at`, `updated_at`) VALUES
+(1, 'travel_cost', '10', '2018-05-19 09:02:18', '0000-00-00 00:00:00');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `admin_settings`
+--
+ALTER TABLE `admin_settings`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `admin_settings`
+--
+ALTER TABLE `admin_settings`
+  MODIFY `id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+ALTER TABLE `booking_ratings` ADD FOREIGN KEY (`customer_booking_id`) REFERENCES `customer_bookings`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE `customer_bookings` ADD `status` TINYINT UNSIGNED NOT NULL DEFAULT '0' COMMENT '0=>''Pending'', 1=>''Done But Payment Incomplete'', 3=>''Payment Completed''' AFTER `aspiration_image`;
+
+
+
+CREATE TABLE `favourite_beauticians` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `customer_id` int(10) UNSIGNED NOT NULL,
+  `beautician_id` int(10) UNSIGNED NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `favourite_beauticians`
+--
+ALTER TABLE `favourite_beauticians`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `customer_id` (`customer_id`),
+  ADD KEY `beautician_id` (`beautician_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `favourite_beauticians`
+--
+ALTER TABLE `favourite_beauticians`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `favourite_beauticians`
+--
+ALTER TABLE `favourite_beauticians`
+  ADD CONSTRAINT `favourite_beauticians_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `favourite_beauticians_ibfk_2` FOREIGN KEY (`beautician_id`) REFERENCES `users` (`id`);
+
+
+UPDATE `flag_reasons` SET `reason` = 'Other.' WHERE `flag_reasons`.`id` = 7; UPDATE `flag_reasons` SET `reason` = 'Other.' WHERE `flag_reasons`.`id` = 15;
+
+delete from flag_reasons where id IN(8,16);
+
+ALTER TABLE `customer_bookings` CHANGE `cost` `service_cost` DECIMAL(6,2) NOT NULL;
+ALTER TABLE `customer_bookings` ADD `discount` FLOAT UNSIGNED NOT NULL AFTER `service_cost`, ADD `actual_cost` DECIMAL(6,2) NOT NULL AFTER `discount`;
+ALTER TABLE `customer_bookings` ADD `session_no` TINYINT UNSIGNED NOT NULL AFTER `has_multiple_sessions`;
+UPDATE `flag_reasons` SET `reason` = 'Customer did not provide adequate space for the service to be sufficiently carried out (mobile).' WHERE `flag_reasons`.`id` = 14;
+
+ALTER TABLE `customer_bookings_master` ADD `travel_cost` DECIMAL(6,2) NOT NULL AFTER `beautician_id`;
+ALTER TABLE `customer_bookings` ADD `default_travel_cost` DECIMAL(6,2) UNSIGNED NOT NULL AFTER `aspiration_image`;
+
+ALTER TABLE `beautician_services` ADD `locked_by` INT UNSIGNED NOT NULL AFTER `discounted_days`;
+
+ALTER TABLE `customer_bookings_master`
+  DROP `booking_package_start_datetime`,
+  DROP `booking_package_end_datetime`;
+
+ALTER TABLE `users` ADD UNIQUE( `email`, `deleted_at`);

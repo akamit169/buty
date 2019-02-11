@@ -1,0 +1,34 @@
+ALTER TABLE `beautician_services` ADD `description` TEXT NOT NULL AFTER `cost`;
+
+ALTER TABLE `services` ADD `image` VARCHAR(100) NOT NULL AFTER `name`;
+
+ALTER TABLE `beautician_services` CHANGE `duration` `duration` SMALLINT UNSIGNED NOT NULL COMMENT 'in mins';
+
+ALTER TABLE `beautician_services` CHANGE `time_btw_sessions` `time_btw_sessions` SMALLINT UNSIGNED NOT NULL;
+
+ALTER TABLE `beautician_services` ADD `parent_service_id` SMALLINT UNSIGNED NOT NULL AFTER `service_id`;
+
+ALTER TABLE `beautician_services` ADD `no_of_sessions` TINYINT UNSIGNED NOT NULL AFTER `tip`;
+
+ALTER TABLE `beautician_services` ADD `discount` FLOAT NOT NULL AFTER `time_btw_sessions`;
+
+ALTER TABLE `beautician_services` ADD `discount_startdate` DATE NULL DEFAULT NULL AFTER `discount`, ADD `discount_enddate` DATE NULL DEFAULT NULL AFTER `discount_startdate`;
+
+ALTER TABLE `beautician_services` ADD INDEX(`parent_service_id`);
+
+ALTER TABLE `beautician_services` ADD FOREIGN KEY (`parent_service_id`) REFERENCES `services`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+ALTER TABLE `users` ADD `rating` TINYINT UNSIGNED NOT NULL AFTER `stripe_customer_id`;
+
+
+UPDATE `services` SET `image` = 'Group7@2x.png' WHERE `services`.`id` = 1; UPDATE `services` SET `image` = 'Group13@2x.png' WHERE `services`.`id` = 2; UPDATE `services` SET `image` = 'Group9@2x.png' WHERE `services`.`id` = 3; UPDATE `services` SET `image` = 'Group12@2x.png' WHERE `services`.`id` = 4; UPDATE `services` SET `image` = 'Group15@2x.png' WHERE `services`.`id` = 5; UPDATE `services` SET `image` = 'Group10@2x.png' WHERE `services`.`id` = 6; UPDATE `services` SET `image` = 'Group11@2x.png' WHERE `services`.`id` = 7; UPDATE `services` SET `image` = 'Group14@2x.png' WHERE `services`.`id` = 8; UPDATE `services` SET `image` = 'Group17@2x.png' WHERE `services`.`id` = 9; UPDATE `services` SET `image` = 'Group18@2x.png' WHERE `services`.`id` = 10;
+
+ALTER TABLE `beautician_availability_schedule` ADD `is_available` TINYINT(1) NOT NULL DEFAULT '1' COMMENT '0=>''Not Available'', 1=>''Available''' AFTER `end_datetime`; 
+
+ALTER TABLE `beautician_availability_schedule` CHANGE `start_datetime` `start_datetime` DATETIME NULL DEFAULT NULL, CHANGE `end_datetime` `end_datetime` DATETIME NULL DEFAULT NULL; 
+
+DELETE FROM `services` WHERE name = '';
+
+ALTER TABLE `users` CHANGE `zipcode` `zipcode` MEDIUMINT NULL;
+
+ALTER TABLE `beautician_services` CHANGE `cost` `cost` DECIMAL(7,2) NOT NULL;

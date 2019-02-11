@@ -1,0 +1,53 @@
+ALTER TABLE `skin_types` ADD `details` VARCHAR(500) NOT NULL AFTER `type`;
+--
+-- Database: `beautyjunkie`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `beautician_kits`
+--
+
+CREATE TABLE IF NOT EXISTS `beautician_kits` (
+  `id` int(11) unsigned NOT NULL,
+  `user_id` int(10) unsigned NOT NULL,
+  `kit_name` varchar(255) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `deleted_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `beautician_kits`
+--
+ALTER TABLE `beautician_kits`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `beautician_kits`
+--
+ALTER TABLE `beautician_kits`
+  MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT;
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `beautician_kits`
+--
+ALTER TABLE `beautician_kits`
+  ADD CONSTRAINT `beautician_kits_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+ALTER TABLE `users` ADD `is_flagged` TINYINT(1) NOT NULL DEFAULT '0' COMMENT '0=>''Not Flagged'', 1=>''Flagged''' AFTER `status`; 
+
+ALTER TABLE `users` CHANGE `date_of_birth` `date_of_birth` DATE NULL DEFAULT NULL;

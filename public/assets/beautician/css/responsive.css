@@ -1,0 +1,296 @@
+@media only screen and (max-width:1199px) {
+    .profile-info-wrap{display: inline-block; width: 100%;}
+    .content-area .row .col{width: 100%;}
+    .notification-wrapper.content-area .row .col{width: 50%; float: left;}
+    .profile-detail{width: 50%; float: left;}
+    .profile-dis{width: 50%; float: left;}
+    .beauty-navigation li a span{display: none;}
+    .services-wrapper.content-area .row .col{width: 50%;}
+    .services-wrapper .form-field-wrapper .row .col{width: 100%;}
+    .d-d-wrapper-left .drop-down{max-width: 90px;}
+    .form-field-wrapper .lage-label{width: 70px;}
+    .form-field-wrapper .form-fields {width: calc(100% - 70px)}
+    .form-button button {width: 100%; margin: 0;}
+    .form-button button.border-btn{margin-bottom: 15px;}
+    .d-d-wrapper-left span.label-name.dbs{max-width: 145px; padding-top: 5px;}
+    .service-checklist .checkboxGroup {margin: 0 0 15px 0;}
+    .main-content-area.gradient-border .inner-menu-wrapper .tab-section{display: none;}
+    .mobile-inner-menu{display: block; width: calc(100% - 90px); float: right;}
+    .inner-menu-wrapper .inner-heading {display: inline-block;float: left;padding-top: 14px;}
+    .main-content-area .inner-menu-wrapper {margin: 0px;display: inline-block;width: 100%;height: 65px;}
+    .main-content-area .inner-menu-wrapper .common-tabs{overflow-x: scroll; max-width: 100%;}
+    .main-content-area .inner-menu-wrapper .common-tabs ul{min-width: 920px;}
+    .input-field span.info-text{font-size: 10px;}
+    .add-profile-photo{min-height: inherit;}
+    .profile-information{margin-top: 20px;}
+    .booking-wrapper{
+        padding:30px 15px 0 15px;
+    }
+    .profile-wrapper .main-content-area{padding-left: 0px; padding-bottom: 150px;}
+
+
+}
+@media only screen and (max-width:767px) {
+    .bs-pg{ padding-bottom: 150px;}
+    .right-align{ right: 20px !important; left: inherit !important;}
+    .forgot-link{ margin-bottom: 30%;}
+    .btn-bottom-align{position: absolute; bottom: 35px; width: 90% !important;}
+    .top-padding {padding-top:86px !important;}
+    .inner-container{ padding-top: 56px;}
+    .footer-container{ margin: 0 auto; float: none;}   
+    .login-screen{ max-width: 90%;}
+    .large-btn-wrapper{max-width: 100%;}
+    .login-btn, .login-btn:focus, .login-btn:hover { width: 65px; padding: 3px 5px; float: right; top:16px;}
+    .sign-btn, .sign-btn:focus, .sign-btn:hover { width: 70px; padding: 3px 5px; left: 0; margin-left: 10px; top:16px;}
+    .logo-center { width: 96% !important;}
+    .logo { background: url("../images/logo.png") no-repeat center center; width: 100%; margin-top: 3px;}
+    .upload-lagel{ max-width: 100%;}
+    .signup-section{ font-size: 13px; top:6px;}
+    .banner-section{ height: 100px;}
+    .primary-btn {height: 36px; display: block; margin: 6px auto 0 auto; line-height: 36px; width: 110px;}
+    .banner-section img{ min-height: 100px; object-fit: cover;}
+    .captions-wrap{ padding: 20px 0 150px 0;}
+    .img-box{height: 127px;}
+    .fix-pg .img-box{height: 150px;}
+    .profile-pic {margin-right: 5px;}
+    .user-details { margin-top: 5px; display: inline-block; width: 70%; float: left;}
+    .caption-details { padding: 10px 7px 5px 7px;}
+    .fix-img .caption-details { padding: 10px 7px 5px 7px;}
+    .name{line-height: normal; margin-left: 0; margin-bottom: 2px;}
+    .date{line-height: normal; float: left;}
+    .tab-section { padding: 0;}
+    .tab-section span{ padding: 20px 0px 20px 8px;}
+    .drop-icon{ display: block; z-index: 99;}
+    .home-tab .common-tabs .indicator{ display: none;}
+    .home-tab .common-tabs{ margin-right: 10px; width: 165px;}
+    .home-tab .common-tabs .tabs {height: auto; width: 165px; float: left; white-space: normal; background: #474747; position:absolute; right: 0; z-index: 9; display: none;}
+    .home-tab .common-tabs .tab {height: auto; float: left; width: 100%; line-height: 35px;}
+    .home-tab .common-tabs .tab a{height: 35px; cursor: pointer;}
+    .home-tab .common-tabs .tab a:hover{ color: #fff;}
+    .active-tab {height: 59px; display: block !important; line-height: 59px; width: 100%; text-align: center; color: #75E3BE; cursor: pointer;}
+    .icon-close{ background: url("../images/close-icon.png") no-repeat center center; display: block; width: 16px; height: 15px; cursor: pointer;}
+    .main-header{ position: fixed; height: 60px; padding: 0; overflow-y: auto;}
+    .menu-toggle {font-size: 24px; color: #fff; float: left; padding: 12px 10px; display: block; width: auto;}
+    .inner-page-logo { float: none; margin: 0 auto; left: 10px; position: relative;}
+    .nav-wrapper{ display: none; background: #323232; box-shadow: none; width: 100%; line-height: normal; min-height: 100%; position: absolute; left: 0; z-index: 999;overflow-y: scroll; padding-bottom: 35px;}
+    .nav-wrapper ul {margin: 0; padding: 0; display: inline-block; width: 100%;}
+    .nav-wrapper ul li { margin: 0; list-style: none; float: left; line-height: normal; display: inline-block; width: 100%; height: 59px;}
+    .nav-wrapper ul li a {font-size: 12px; line-height: 23px; display: inline-block; padding: 17px 15px; margin: 0; width: 100%; border-bottom: 2px solid #474747;}
+    .nav-wrapper ul li.profile-nav { width: 100%; position: relative; height: auto;}
+    .nav-wrapper ul li.profile-nav a {float: left; width: 100%;}
+    .nav-wrapper ul li.active{border-left: 3px solid #75E3BE;}
+    .nav-wrapper ul li.active a { color: #75E3BE; border-bottom: 2px solid #474747;}
+    .nav-wrapper .profile-sub-nav {display: none; position: relative; width: 84%; padding: 0; background: transparent; top: inherit; height: auto; margin-left: 40px; margin-right: 10px; border-bottom: none;}
+    .nav-wrapper ul li.profile-nav.active a{ border-bottom: none;}
+    .nav-wrapper ul li.profile-nav.active{  border-bottom: 2px solid #474747;}
+    .nav-wrapper ul li.profile-nav .profile-sub-nav ul { width: 100%;}
+    .nav-wrapper ul li.profile-nav .profile-sub-nav a { padding: 12px 28px 12px 0;}
+    .nav-wrapper ul li.profile-nav .profile-sub-nav ul li {padding: 0; border-top: 1px solid #AAAAAA; height: auto; border-left: none;}
+    .nav-wrapper ul li.profile-nav .profile-sub-nav li.active a{border-bottom: none}
+    .nav-wrapper ul li.profile-nav .profile-sub-nav li a:hover{ border-bottom: none;}
+    .nav-wrapper ul li.setting-nav { width: 100%; position: relative; height: auto;}
+    .nav-wrapper ul li.setting-nav a {float: left; width: 100%;}
+    .nav-wrapper .setting-sub-nav {display: none; position: relative; width: 84%; padding: 0; background: transparent; top: inherit; height: auto; margin-left: 40px; margin-right: 10px; border-bottom: none;}
+    .nav-wrapper ul li.setting-nav.active a{ border-bottom: none;}
+    .nav-wrapper ul li.setting-nav.active{  border-bottom: 2px solid #474747;}
+    .nav-wrapper ul li.setting-nav .setting-sub-nav ul { width: 100%;}
+    .nav-wrapper ul li.setting-nav .setting-sub-nav a { padding: 12px 28px 12px 0;}
+    .nav-wrapper ul li.setting-nav .setting-sub-nav ul li {padding: 0; border-top: 1px solid #AAAAAA; height: auto; border-left: none;}
+    .nav-wrapper ul li.setting-nav .setting-sub-nav li.active a{border-bottom: none}
+    .nav-wrapper ul li.setting-nav .setting-sub-nav li a:hover{ border-bottom: none;}
+    .nav-wrapper ul li a i.arrow{ float: right !important; display: block; color: #8D8D8D;}
+    .logout{}
+    .lg-sub-html .date{float: right;}
+    .services-wrapper.content-area .row .col{ width: 100%;}
+    .mobile-down{display: none;}
+    .form-field-wrapper .s6 .form-fields{ width: 100%;}
+    .form-field-wrapper .s6 .s12 .form-fields {width: calc(100% - 70px);}
+    .profile-detail{width: 100%; float: left;}
+    .profile-dis{width: 100%; float: left;}
+    .inner-caption ul li{width: 100%; margin: 0px;}
+    .main-content-area{padding: 0px; padding-bottom: 150px;}
+    .profile-wrapper.content-area .row .col{padding: 0px;}
+    .content-area{padding: 0px; margin: 0px;}
+    .profile-info-wrap{margin: 0px; border-bottom: 1px solid #979797; }
+    .services-wrapper .profile-info-wrap{border-bottom:none; }
+    .gradient-border{border: none; margin-top: 15px; background: none;}
+    .services-wrapper .profile-info-wrap ul.collapsible{margin: 0px;}
+    .pro-section{ width: 100%;}
+    .pro-section .set-btn { min-width: 100%;}
+    .pro-section > .row > .col{ padding: 0 10px;}
+    .lg-actions .lg-next, .lg-actions .lg-prev { opacity: 0.3 !important;}
+    .edit-profile{ max-width: 94%;}
+    .input-field label {left: 15px; font-size: 11px;}
+    .input-field input {padding-left: 15px; font-size: 11px;}
+    .input-field label.active:not(.label-icon){font-size: 10px;}
+    .data-label { font-size: 12px;}
+    .edit-profile .check-label{ width: 80%; font-size: 11px;}
+    .edit-profile .d-d-wrapper-left span.label-name{ margin-left: 20px; font-size: 11px;}
+    .edit-profile .d-d-wrapper-left{ margin-top: 10px;}
+    .edit-profile .d-d-wrapper-left .drop-down{ max-width: 155px;}
+    .edit-profile .set-btn{ float: none; min-width: 100%;}
+    .radius-div { margin-top: 10px;}
+    .payment-details{ max-width: 94%;}
+    .add-photo-button{margin: 40px auto;}
+    .notification-wrapper.content-area{padding-top: 33px; padding-bottom: 150px;}
+    .notification-wrapper.content-area .row{margin: 0px;}
+    .notification-wrapper.content-area .row .col{width: 100%; padding: 0; }
+    .all-notification{width: 100%;}
+    .detail-for-mobile{display: none;}
+    .n-detail{border: none;background: #323232;}
+    .avail-section{ width: 100%;}
+    .booking-section{ width: 100%;}
+    .data-list{width:100%;padding-bottom: 150px; padding-left: 0;}
+    .calendar-div { width: 100%;}
+    .cell-header { width: 100%; background: transparent;}
+    .avail-pg .top-padding {padding-top: 60px !important;}
+    .sel-avail-div{padding: 0;}
+    .booking-pg .top-padding {padding-top: 60px !important;}
+    .sel-book-div{padding: 0;}
+    .avail-section .ui-datepicker{padding: 0 !important;}
+    .avail-section .ui-datepicker .ui-datepicker-title{ margin: 0; padding: 6px; background: rgba(255,255,255,0.2); top: -1px; position: relative;}
+    .avail-section .ui-datepicker-prev,.avail-section .ui-datepicker-next{ margin-top: 5px; display: block !important; z-index: 10;}
+    .booking-section .ui-datepicker{padding: 0 !important;}
+    .booking-section .ui-datepicker .ui-datepicker-title{ margin: 0; padding: 6px; background: rgba(255,255,255,0.2); top: -1px; position: relative;}
+    .booking-section .ui-datepicker-prev,.booking-section .ui-datepicker-next{ margin-top: 5px; display: block;}
+    .heading-text{ text-align: left;}
+    .booking-list{margin: 0 -15px;}
+    .booking-list li{padding: 0 5px;}
+    .added-booking{margin: 0 -15px 25px;}
+    .upload-work-wrap {max-width: 300px;}
+    .work-service .lage-label {padding-top: 0; margin-bottom: 10px; text-align: center;}
+    .service-checklist .services-line{width: 100%;}
+    .services-panel{display: block; margin-top: 0;}
+    .back-arrow{ display: none;}
+    .s-name{ width: 71%;}
+    .mobile-inner-menu ul li a{ background: transparent; color: #fff;}
+    .mobile-inner-menu ul li:hover{ background: transparent;}
+    .mobile-inner-menu ul li a:hover{ background: transparent; color: #75E3BE;}
+    .mobile-inner-menu ul li a.active{ background: transparent; color: #75E3BE;}
+    .price-input{ padding-left:22px !important; }
+    .d-d-wrapper-left .drop-down { max-width: 102px;}
+    .mobile-inner-menu { width: calc(100% - 180px);}
+    .service-checklist{ margin: 10px 0 20px 0;}
+    .padding-left-none{ padding-left: 0.75rem !important;}
+    .label-data{font-size: 11px; text-align:left;}
+    .border-right {border-right: none;}
+    .set-date {float: none; padding-left: 10px;}
+    .payment-details .set-btn{ min-width: 100%;}
+    #rate-button-modal {width: 280px;}
+    .booking-list-view {display: inline-block; width: 100%; padding-bottom: 150px;}
+    .time-list{ width: 72px;}
+    .booking-status{width: calc(100% - 95px); margin-left: 10px;}
+    .customer-data{ line-height: 24px; float: left; width: 71%; font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+    .booking-action {line-height: normal; float: left; width: 50%;}
+    .status-details p:nth-child(1),.status-details p:nth-child(2){ display: none;}
+    .status-details p:nth-child(3){ width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; line-height: 24px;}
+    .status-rate-action { display: none;}
+    .status-pend-action,.status-comp-action{ float: left; text-align: left; width: 77%;}
+    .status-rate-action-mob{ display: inline-block; font-size: 24px; color: #fff; float: right; letter-spacing: 3px; position: relative; top: -32px;}
+    .detailed-booking{ padding: 10px;}
+    .past-book-div .detailed-booking { height: 60px;}
+    .completed-status {width: 100%;}
+    .cancel-status {width: 100%;}
+    .bp-info {margin-left: 9px;}
+    .bs-pg .padding-left-none {padding-left:0 !important;}
+    .up-book-pic{ height: 100px;}   
+    .b-pics li:last-child{ margin-right: 0;}
+    .bs-details{ padding: 15px 5px;}
+    #edit-time-modal {width: 300px;}
+    #edit-time-modal .defaultEntry {width: 46px; font-size: 10px;}
+    #edit-time-modal .drop-down {width: 45px;}
+    #edit-time-modal .drop-down .input-field input { padding: 0 5px; font-size:10px; }
+    _::-webkit-full-page-media, _:future, :root .inner-menu-wrapper::after {bottom:7px !important;}
+    .sl-div { padding: 0 !important;}
+    .sl-div .slider { height: 300px;}
+    .slick-prev, .slick-next{ display: none !important;}
+    footer a { width: 90%;}
+}
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .tab-section{ padding: 0 6px;}
+    .tab-section span{ padding: 5px 20px; display: block; text-align: center;width: 100%;}
+    .home-tab .common-tabs{ width: 100%;}
+    .home-tab .common-tabs .tabs{ height: 35px; display: flex !important;}
+    .home-tab .common-tabs .tab{ line-height: 35px; height: 35px; flex-grow: 1;}
+    .home-tab .common-tabs .tab a{ padding: 0 9px;}
+    .captions-wrap{ padding: 10px;}
+    .name,.date{ font-size: 10px;}
+    .nav-wrapper{width: 60%;}
+    .nav-wrapper ul li a span{ display: none;}
+    .main-header {height: 56px !important;}
+    .nav-wrapper ul li.profile-nav { width: calc(100% - 300px);}
+    .nav-wrapper ul li a { padding: 17px 15px; margin: 0;}
+    .nav-wrapper ul li.profile-nav .profile-sub-nav a span{ display: block;}
+    .nav-wrapper ul li.setting-nav .setting-sub-nav a span{ display: block;}
+    .edit-profile{ max-width: 500px;}
+    .edit-profile .d-d-wrapper-left span.label-name{ margin-left: 20px;}
+    .radius-div { margin-top: 10px;}
+    .edit-profile .set-btn{ float: none; min-width: 375px;}
+    .nav-wrapper .setting-sub-nav{ top: 56px;}
+    .nav-wrapper ul li.profile-nav .profile-sub-nav li a{ margin: 0 15px;}
+    .payment-details{ max-width: 500px;}
+    .avail-section{ width: 700px;}
+    .booking-section{ width: 700px;}
+    .data-list{width:350px;}
+    .padding-left-none {padding-left: 0.75rem !important;}
+    .set-date {float: none;}
+    .label-data {text-align: left;}
+    .time-list{ width: 72px;}
+    .booking-status{width: calc(100% - 95px); margin-left: 10px;}
+    .customer-data{ line-height: 24px; float: left; width: 71%; font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+    .booking-action {line-height: normal; float: left; width: 50%;}
+    .status-details p:nth-child(1),.status-details p:nth-child(2){ display: none;}
+    .status-details p:nth-child(3){ width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; line-height: 24px;}
+    .status-rate-action { display: none;}
+    .status-pend-action,.status-comp-action{ float: left; text-align: left;}
+    .status-rate-action-mob{ display: inline-block; font-size: 24px; color: #fff; float: right; letter-spacing: 3px; position: relative; top: -32px;}
+    .detailed-booking{ padding: 10px;}
+}
+@media screen and (min-width:1024px) and (max-width:1199px) {
+    .tab-section{ padding: 0 10px;}
+    .tab-section span{ padding: 20px 20px;}
+    .home-tab .common-tabs .tabs{display: flex !important;}
+    .common-tabs .tab a{ padding: 0 9px;}
+    .captions-wrap{ padding: 30px 15px;}
+    .name,.date{ font-size: 10px;}
+    .nav-wrapper{width: 58%;}
+    .nav-wrapper ul li a span{ display: none;}
+    .main-header {height: 56px !important;}
+    .nav-wrapper ul li.profile-nav { width: calc(100% - 300px);}
+    .nav-wrapper ul li a { padding: 17px 15px; margin: 0;}
+    .nav-wrapper ul li.profile-nav .profile-sub-nav a span{ display: block;}
+    .nav-wrapper ul li.setting-nav .setting-sub-nav a span{ display: block;}
+    .edit-profile{ max-width: 500px;}
+    .edit-profile .d-d-wrapper-left span.label-name{ margin-left: 20px;}
+    .radius-div { margin-top: 10px;}
+    .edit-profile .set-btn{ float: none; min-width: 375px;}
+    .nav-wrapper .setting-sub-nav{ top: 56px;}
+    .nav-wrapper ul li.profile-nav .profile-sub-nav li a{ margin: 0 15px;}
+    .payment-details{ max-width: 500px;}
+    .avail-section{ width: 800px;}
+    .booking-section{ width: 800px;}
+    .data-list{width:450px;}
+    .padding-left-none {padding-left: 0.75rem !important;}
+    .set-date {float: none;}
+    .label-data {text-align: left;}
+    .time-list{ width: 70px;}
+    .booking-status{width: calc(100% - 95px); margin-left: 10px;}
+    .customer-data{ line-height: 24px; float: left; width: 71%; font-size: 11px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+    .booking-action {line-height: normal; float: left; width: 50%;}
+    .status-details p:nth-child(1),.status-details p:nth-child(2){ display: none;}
+    .status-details p:nth-child(3){ width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; line-height: 24px;}
+    .status-rate-action { display: none;}
+    .status-pend-action,.status-comp-action{ float: left; text-align: left;}
+    .status-rate-action-mob{ display: inline-block; font-size: 24px; color: #fff; float: right; letter-spacing: 3px; position: relative; top: -32px;}
+    .detailed-booking{ padding: 10px;}
+}
+@media screen and (min-width:1200px) and (max-width:1250px) {
+    .inner-menu-wrapper .tab-section .tab a{
+        font-size: 11px;
+    }
+}
+_::-webkit-full-page-media, _:future, :root .inner-menu-wrapper::after {
+  bottom:0px;
+
+}

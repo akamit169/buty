@@ -1,0 +1,7 @@
+
+ALTER TABLE `users`  ADD `reset_password` TINYINT(1) UNSIGNED NOT NULL  AFTER `remember_token`;
+ALTER TABLE `user_feedbacks` CHANGE `rating` `rating` FLOAT NULL DEFAULT NULL;
+ALTER TABLE `user_average_rating` CHANGE `avg_rate` `avg_rate` FLOAT NOT NULL;
+
+
+ALTER TABLE `users`  ADD `reset_password_count` TINYINT(2) NOT NULL  AFTER `reset_password`,  ADD `reset_password_date` DATE NOT NULL  AFTER `reset_password_count`;

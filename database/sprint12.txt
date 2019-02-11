@@ -1,0 +1,6 @@
+ALTER TABLE `users` ADD `new_notifications_count` INT UNSIGNED NOT NULL AFTER `review_count`;
+ALTER TABLE `customer_bookings` ADD `timezone` VARCHAR(200) NOT NULL AFTER `stripe_charge_id`;
+
+ALTER TABLE `customer_bookings` ADD `distance` INT UNSIGNED NOT NULL AFTER `timezone`;
+
+UPDATE `services` SET `name` = 'Brows', `image` = 'brows@2x.png' WHERE `services`.`id` = 5; UPDATE `services` SET `name` = 'Lashes', `image` = 'lashes@2x.png' WHERE `services`.`id` = 6; UPDATE `services` SET `name` = 'Waxing', `image` = 'waxing@2x.png' WHERE `services`.`id` = 7;

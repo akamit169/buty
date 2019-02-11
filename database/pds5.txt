@@ -1,0 +1,1 @@
+ALTER TABLE `customer_bookings` ADD `notified_before_booking` TINYINT UNSIGNED NOT NULL DEFAULT '0' AFTER `ontime_confirmation_notification`;

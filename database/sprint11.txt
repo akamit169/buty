@@ -1,0 +1,16 @@
+UPDATE `services` SET `image` = 'hair@2x.png' WHERE `services`.`id` = 1; UPDATE `services` SET `image` = 'makeup@2x.png' WHERE `services`.`id` = 2; UPDATE `services` SET `image` = 'nails@2x.png' WHERE `services`.`id` = 3; UPDATE `services` SET `image` = 'sprayTanning@2x.png' WHERE `services`.`id` = 4; UPDATE `services` SET `image` = 'waxing@2x.png' WHERE `services`.`id` = 5; UPDATE `services` SET `image` = 'brows@2x.png' WHERE `services`.`id` = 6; UPDATE `services` SET `image` = 'lashes@2x.png' WHERE `services`.`id` = 7; UPDATE `services` SET `image` = 'cosmeticTatooing@2x.png' WHERE `services`.`id` = 8; UPDATE `services` SET `image` = 'aesthetics@2x.png' WHERE `services`.`id` = 9; UPDATE `services` SET `image` = 'barbering@2x.png' WHERE `services`.`id` = 10;
+
+
+UPDATE services SET name = REPLACE(name, '+', ' + ');
+
+UPDATE `services` SET `name` = 'tape hair extensions full + ½ head ' WHERE `services`.`id` = 119; UPDATE `services` SET `name` = 'tape hair russian extensions full + ½ head' WHERE `services`.`id` = 124; UPDATE `services` SET `name` = 'tape hair euro extensions full + 1/2 head' WHERE `services`.`id` = 132;
+
+
+ALTER TABLE `booking_disputes` ADD `raised_by` INT UNSIGNED NOT NULL AFTER `customer_booking_id`, ADD `raised_to` INT UNSIGNED NOT NULL AFTER `raised_by`, ADD INDEX (`raised_by`), ADD INDEX (`raised_to`);
+
+ALTER TABLE `booking_disputes` ADD FOREIGN KEY (`raised_by`) REFERENCES `beauty`.`users`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT; ALTER TABLE `booking_disputes` ADD FOREIGN KEY (`raised_to`) REFERENCES `beauty`.`users`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+ALTER TABLE `notifications` ADD `booking_id` INT UNSIGNED NOT NULL AFTER `recipient_id`, ADD INDEX (`booking_id`);
+
+ALTER TABLE `notifications` CHANGE `booking_id` `booking_id` INT(10) UNSIGNED NULL;
+ALTER TABLE `notifications` ADD FOREIGN KEY (`booking_id`) REFERENCES `beauty`.`customer_bookings`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;

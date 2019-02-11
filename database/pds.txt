@@ -1,0 +1,9 @@
+ALTER TABLE `users` ADD `bank_bsb_no` VARCHAR(15) NOT NULL AFTER `bank_acc_no`, ADD `bank_username` VARCHAR(50) NOT NULL AFTER `bank_bsb_no`;
+
+ALTER TABLE `users` CHANGE `commission_percent` `commission_percent` DECIMAL(5,2) UNSIGNED NOT NULL DEFAULT '0';
+ALTER TABLE `services` CHANGE `commission_percent` `commission_percent` DECIMAL(5,2) UNSIGNED NOT NULL DEFAULT '0';
+
+ALTER TABLE `beautician_services` CHANGE `premium_commission_percent` `premium_commission_percent` DECIMAL(5,2) UNSIGNED NULL DEFAULT NULL;
+
+
+ALTER TABLE `users` ADD `state` VARCHAR(100) NOT NULL AFTER `suburb`;

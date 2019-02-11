@@ -1,0 +1,92 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 1, 2016, 11:14:43 AM
+    Author     : abhijeet
+*/
+
+.stream-form label.error-msg {
+    color: #ed1c24;
+}
+.padd-bottom-70{padding-bottom: 90px;}
+.stream-form .form-group label.mandatory {
+    color: #9d9fa2;
+    float: right;
+    font-size: 10px;
+}
+table.dataTable thead .sorting_desc, table.dataTable thead .sorting_asc, table.dataTable thead .sorting {
+    -webkit-background-size: 10px auto;
+    background-size: 10px auto;
+}
+.header .orange-color, .header .orange-color:hover {
+    color: primary-orange
+}
+/* start css for loader */
+/*css for loader*/
+.loading-overpay {
+  background: rgba(0, 0, 0, 0.6) none repeat scroll 0 0;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: 999999;
+  display: none;
+  top: 0;
+  left: 0; }
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%; }
+
+.loading-bar {
+  display: inline-block;
+  width: 4px;
+  height: 18px;
+  border-radius: 4px;
+  -webkit-animation: loading 1s ease-in-out infinite;
+  -o-animation: loading 1s ease-in-out infinite;
+  animation: loading 1s ease-in-out infinite; }
+
+.loading-bar:nth-child(1) {
+  background-color: #ffffff;
+  -webkit-animation-delay: 0;
+  -o-animation-delay: 0;
+  animation-delay: 0; }
+
+.loading-bar:nth-child(2) {
+  background-color: #e0963d;
+  -webkit-animation-delay: 0.09s;
+  -o-animation-delay: 0.09s;
+  animation-delay: 0.09s; }
+
+.loading-bar:nth-child(3) {
+  background-color: #ffffff;
+  -webkit-animation-delay: .18s;
+  -o-animation-delay: .18s;
+  animation-delay: .18s; }
+
+.loading-bar:nth-child(4) {
+  background-color: #e0963d;
+  -webkit-animation-delay: .27s;
+  -o-animation-delay: .27s;
+  animation-delay: .27s; }
+
+@keyframes loading {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); }
+  20% {
+    -webkit-transform: scale(1, 2.2);
+    -ms-transform: scale(1, 2.2);
+    -o-transform: scale(1, 2.2);
+    transform: scale(1, 2.2); }
+  40% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1); } }

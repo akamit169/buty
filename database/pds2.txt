@@ -1,0 +1,2 @@
+update `services` set description = "" WHERE description like "%lorem ipsum%";
+update `services` set tip = "" WHERE tip like "%lorem ipsum%";

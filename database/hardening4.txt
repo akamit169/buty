@@ -1,0 +1,10 @@
+ALTER TABLE `customer_bookings` DROP `is_referral_cashback_applicable`;
+ALTER TABLE `users` DROP `available_cashback_claims`;
+ALTER TABLE `customer_bookings` ADD `referred_user_id` INT UNSIGNED NULL AFTER `commission_percent`;
+ALTER TABLE `customer_bookings` ADD INDEX(`referred_user_id`);
+ALTER TABLE `customer_bookings` ADD FOREIGN KEY (`referred_user_id`) REFERENCES `beauty`.`users`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
+
+ALTER TABLE `users` ADD `has_referrer_claimed_cashback` TINYINT UNSIGNED NOT NULL DEFAULT '0' AFTER `referral_code_used`;
+
+
+INSERT INTO `admin_settings` (`id`, `config_key`, `config_value`, `created_at`, `updated_at`) VALUES (NULL, 'global_commission', '0', CURRENT_TIMESTAMP, '0000-00-00 00:00:00.000000');

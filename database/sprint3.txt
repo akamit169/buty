@@ -1,0 +1,5 @@
+ALTER TABLE `users` ADD `referral_code` VARCHAR(8) NOT NULL AFTER `lng`, ADD `referral_code_used` VARCHAR(8) NOT NULL AFTER `referral_code`;
+
+ALTER TABLE `users` ADD `stripe_customer_id` VARCHAR(100) NOT NULL AFTER `referral_code_used`;
+
+ALTER TABLE `services` ADD `description` TEXT NOT NULL AFTER `name`; 

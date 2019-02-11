@@ -1,0 +1,5 @@
+ALTER TABLE `customer_bookings_master`
+  DROP `travel_cost`,
+  DROP `status`;
+
+ALTER TABLE `customer_bookings` ADD `travel_cost` DECIMAL(6,2) NOT NULL AFTER `aspiration_image`;

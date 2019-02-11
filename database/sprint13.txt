@@ -1,0 +1,3 @@
+ALTER TABLE `customer_bookings` ADD `ontime_confirmation_notification` TINYINT UNSIGNED NOT NULL AFTER `distance`;
+
+ALTER TABLE `customer_bookings` ADD `beautician_delay_duration` TINYINT UNSIGNED NOT NULL AFTER `ontime_confirmation_notification`;

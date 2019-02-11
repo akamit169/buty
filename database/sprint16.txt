@@ -1,0 +1,5 @@
+update services set parent_id=66 where parent_id=7;
+update services set parent_id=7 where parent_id=6; 
+update services set parent_id=6 where parent_id=66;
+
+ALTER TABLE `beautician_kits` CHANGE `kit_name` `kit_name` VARCHAR(700) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL;

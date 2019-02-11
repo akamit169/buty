@@ -1,0 +1,13 @@
+# Add any directories, files, or patterns you don't want to be tracked by version control
+/node_modules
+/public/storage
+/public/temp_images
+/public/temp_pdf
+/storage
+/.idea
+Homestead.json
+Homestead.yaml
+/public/uploads
+.DS_Store
+nbproject
+.env

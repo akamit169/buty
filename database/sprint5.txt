@@ -1,0 +1,2 @@
+ALTER TABLE `beautician_availability_schedule` ADD `slot` TINYINT UNSIGNED NOT NULL AFTER `is_available`;
+ALTER TABLE `users` ADD `review_count` INT UNSIGNED NOT NULL AFTER `rating`;
